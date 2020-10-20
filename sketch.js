@@ -117,6 +117,11 @@ function draw(){
      image(bluebird, bird2.body.position.x,bird2.body.position.y, 45,45);
      image(yellowbird, bird3.body.position.x,bird3.body.position.y, 50,50);
      pop();
+	
+     //display trajectory
+     bird.displaytrajectory();
+     bird2.displaytrajectory();
+     bird3.displaytrajectory();
 
     slingshot.display();  
     
