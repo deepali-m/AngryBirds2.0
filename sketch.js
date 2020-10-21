@@ -18,11 +18,6 @@ function preload() {
     getBackgroundImg();
 	bgImg = loadImage("sprites/bg1.png");
 
-    //birdimages
-    redbird = loadImage("sprites/redbird.png");
-    bluebird = loadImage("sprites/bluebird.png");
-    yellowbird = loadImage("sprites/yellowbird.png");
-
     //sounds
     birdselectsound = loadSound("sounds/bird_select.mp3");
     birdflysound = loadSound("sounds/bird_flying.mp3");
@@ -111,12 +106,9 @@ function draw(){
     platform.display(); 
 
      //displaying colorful birds
-     push();
-     imageMode(CENTER);
-     image(redbird, bird.body.position.x,bird.body.position.y, 50,50);
-     image(bluebird, bird2.body.position.x,bird2.body.position.y, 45,45);
-     image(yellowbird, bird3.body.position.x,bird3.body.position.y, 50,50);
-     pop();
+     bird.displayred();
+     bird2.displayblue();
+     bird3.displayyellow();
 	
      //display trajectory
      bird.displaytrajectory();
